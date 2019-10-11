@@ -1,0 +1,23 @@
+.title-product {
+    width: 100%;
+    min-width: 400px;
+    max-width: 450px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1px 10px;
+    border-radius: 2px;
+    background-color: #dadada; 
+    margin-top: 5px;
+  }
+
+.ground-product {
+    width: 100%;
+    min-width: 400px;
+    max-width: 450px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: rgb(238, 238, 238); 
+  }

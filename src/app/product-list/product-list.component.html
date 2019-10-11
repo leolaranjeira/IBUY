@@ -1,31 +1,41 @@
 
 <!-- ngFor utilizado para repetição de dados-->
+<div class="space" >
 <div *ngFor = "let product of products; index as productId">
 
-    <H3>
-        <!-- Adicionar link nas opcoes junto com o hint-->
-        <a [title]="product.name" [routerLink]="['/products', productId]">
-            {{ product.name }}
-        </a>
-    </H3>
+    <div class="title-product">
+        <H3> 
+            <!-- Adicionar link nas opcoes junto com o hint-->
+            <a [title]="product.name" [routerLink]="['/products', productId]">
+                {{ product.name }}
+            </a>
+        </H3>
+    </div>
 
-    <p *ngIf = "product.description">
-        Detalhes: {{product.description}}
-    </p>
+    <div class="ground-product">
 
-    <p *ngIf = "product.price">
-        R$: {{product.price}}
-    </p>
+        <p *ngIf = "product.description">
+            Detalhes: {{product.description}}
+        </p>
 
-    <button (click)="share()">
-        Compartilhar
-    </button>
+        <p *ngIf = "product.price">
+            R$: {{product.price}}
+        </p>
 
-    <app-product-alerts
-        [product] = "product"
-        (notify)= "onNotify()">
-    </app-product-alerts>
+        <button (click)="share()">
+            Compartilhar
+        </button>
 
+        <button (click)="addToCart(product)">
+            Buy
+        </button> 
+
+        <app-product-alerts
+            [product] = "product"
+            (notify)= "onNotify()">
+        </app-product-alerts>
+    </div>
+</div>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.

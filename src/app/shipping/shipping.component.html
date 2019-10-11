@@ -1,6 +1,14 @@
-<h3>Shipping Prices</h3>
+<div class="space">
+<h3>Tabela de Preço</h3>
 
 <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
   <span>{{ shipping.type }}</span>
   <span>{{ shipping.price | currency }}</span>
+</div> 
+
+<div>
+  <h4>CEP</h4>
+  <input type="number" class="cep_input" value="">
+</div>
+
 </div>
